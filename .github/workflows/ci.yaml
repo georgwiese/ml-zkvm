@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install csvtool
+      run: sudo apt-get install csvtool
     - name: Install powdr
       run: git clone https://github.com/powdr-labs/powdr.git && cd powdr/powdr_cli && cargo install --path . && cd ../../
     - name: Run VM
