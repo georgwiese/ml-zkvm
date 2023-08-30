@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install powdr
-      run: git clone git@github.com:powdr-labs/powdr.git && cd powdr && cargo install --path .
+      run: git clone https://github.com/powdr-labs/powdr.git && cd powdr && cargo install --path .
     - name: Run VM
       run: ./run.sh
